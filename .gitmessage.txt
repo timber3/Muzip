@@ -1,9 +1,19 @@
+# ✨ [FEAT] : 
+# 🐛 [FIX]: 
+# 📝 [DOCS]: 
+# 💄 [DESIGN]: 
+# ♻️  [REFACTOR]: 
+# 🔥 [DELETE]: 
+# 🚧 [SAVE]: 
+# 🧱 [INFRA]: 
+# 🎉 [INIT]: 
+
 ################
 # ✨ [FEAT] : 새로운 기능 추가
 # 🐛 [FIX]: 버그 수정
 # 📝 [DOCS]: 문서 수정
 # 💄 [DESIGN]: CSS, UI 추가 및 수정
-# ♻️ [REFACTOR]: 리팩토링
+# ♻️  [REFACTOR]: 리팩토링
 # 🔥 [DELETE]: 코드나 파일 삭제
 # 🚧 [SAVE]: 작업 도중 저장
 # 🧱 [INFRA]: 인프라 관련 설정

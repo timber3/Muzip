@@ -1,42 +1,42 @@
-import '../css/Header.css';
 import SignedIn from './SignedIn.jsx';
 import SignedOut from './SignedOut.jsx';
-import { LogInStateContext } from '../App.jsx';
-import { useContext } from 'react';
 import { getIconImage } from '../util/get-icon.js';
+import { useNavigate } from 'react-router-dom';
+import useMemberStore from '../stores/Members.js';
 
 const Header = () => {
-  const isLogin = useContext(LogInStateContext);
+  const { isLoggedin } = useMemberStore();
+  const nav = useNavigate();
   return (
-    <div className="flex border-b-1 h-18 pt-3 px-11">
-      <div className="flex w-1/4 size-8 gap-2 text-title font-bold cursor-pointer">
-        <div>MUZIP</div>
-        <div className="pt-2">
+    <div className="flex border-b-1 h-18 pt-2 px-11">
+      <div className="flex w-1/5 size-8 gap-2 text-title text-titleCr font-bold" onClick={() => nav('/')}>
+        <div className="cursor-pointer">MUZIP</div>
+        <div className="pt-2 cursor-pointer">
           <img src={getIconImage('headPhone')} />
         </div>
       </div>
 
-      <div className="w-2/4 flex pt-2  text-btCr">
-        <div>
-          <img className="" src={getIconImage('home')} />
-          <div className="btn-base flex justify ">홈</div>
+      <div className="w-3/5 flex pt-2 gap-10 text-btCr">
+        <div className="cursor-pointer" onClick={() => nav('/')}>
+          <img src={getIconImage('home')} className="mr-4" />
+          <div className="ml-1">홈</div>
         </div>
-        <div>
-          <img src={getIconImage('sheet')} />
-          <div className="btn-base">악보</div>
+        <div className="cursor-pointer" onClick={() => nav('/sheet')}>
+          <img src={getIconImage('sheet')} className="ml-1" />
+          <div className="">악보</div>
         </div>
-        <div>
-          <img src={getIconImage('community')} />
-          <div className="btn-base">커뮤니티</div>
+        <div className="cursor-pointer" onClick={() => nav('/community')}>
+          <img src={getIconImage('community')} className="ml-4" />
+          <div className="">커뮤니티</div>
         </div>
-        <div>
-          <img src={getIconImage('band')} />
-          <div className="btn-base">밴드</div>
+        <div className="cursor-pointer" onClick={() => nav('/band')}>
+          <img src={getIconImage('band')} className="ml-1" />
+          <div className="">밴드</div>
         </div>
       </div>
 
-      <div className="flex justify-end w-1/4">
-        {isLogin ? (
+      <div className="flex justify-end w-1/5">
+        {isLoggedin ? (
           <div>
             <SignedIn></SignedIn>
           </div>

@@ -4,6 +4,6 @@
 
 @layer components {
   .btn-base {
-    @apply py-2 px-4 text-btCr cursor-pointer;
+    @apply py-2 px-4 text-btCr text-btn cursor-pointer;
   }
 }

@@ -3,6 +3,8 @@ import band from '../assets/band.svg';
 import community from '../assets/community.svg';
 import home from '../assets/home.svg';
 import sheet from '../assets/sheet.svg';
+import alarm from '../assets/alarm.svg';
+import profile from '../assets/profile.svg';
 
 export function getIconImage(IconName) {
   switch (IconName) {
@@ -16,6 +18,10 @@ export function getIconImage(IconName) {
       return home;
     case 'sheet':
       return sheet;
+    case 'alarm':
+      return alarm;
+    case 'profile':
+      return profile;
     default:
       return null;
   }

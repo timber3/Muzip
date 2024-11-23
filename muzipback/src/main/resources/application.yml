@@ -1,0 +1,14 @@
+spring:
+  server:
+    port: 8080
+  application:
+    name: muzip
+  datasource:
+    url: jdbc:mysql://muzip.store:3306/muzip
+    username: root
+    password: muzip!
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+

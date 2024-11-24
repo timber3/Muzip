@@ -12,4 +12,8 @@ services:
       - /var/lib/letsencrypt:/var/lib/letsencrypt
       - /home/ubuntu/conf:/etc/nginx/conf.d
     networks:
-      - app_network
+      - service_network
+
+networks:
+  service_network:
+    driver: bridge

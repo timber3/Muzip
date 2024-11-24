@@ -1,0 +1,15 @@
+services:
+  nginx:
+    container_name: muzipfront
+    build:
+      context: ./
+      dockerfile: muzipfront/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/lib/letsencrypt:/var/lib/letsencrypt
+      - /home/ubuntu/conf:/etc/nginx/conf.d
+    networks:
+      - app_network

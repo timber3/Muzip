@@ -1,5 +1,4 @@
-FROM openjdk:21-alpine
-
+FROM openjdk:21
 WORKDIR /app
 
 ARG JAR_FILE=build/libs/muzip-0.0.1-SNAPSHOT.jar
